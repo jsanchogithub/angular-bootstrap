@@ -2,48 +2,79 @@
 
 # Angular-Bootstrap!
 
-Previous digging into the Docker's details, let's find a server where we can deploy and test our work.
+Contents of this repo:
 
-Following the steps in:
-https://medium.com/@justkrup/deploy-a-docker-container-free-on-heroku-5c803d2fdeb1 (in 2021-02-18)
+1.- How to create an Angular app.<br>
+2.- How to deploy an Angular app into the server (to Firebase, in this case).<br>
+3.- Some examples of Angular (+Bootstrap) apps.
 
-We will need:
-To create an Heroku account.
-To install Heroku CLI in our computer
-To have Docker working in our computer.
+## How to create an Angular app.
 
+Create an Angular app:
 
-Once we have all this stuff, we can go on. 
-For more details when using Heroku CLI, we can consult:
-https://devcenter.heroku.com/articles/using-the-cli
+1.- Install node.js // used for installing the Angular-CLI. (Follow https://nodejs.org/en/ instructions) <br>
+	After that, we can run npm (Node Package Manager) commands in our system.
+	
+2.- Install Angular-CLI // official Angular line command. [sudo] could be required in Mac/Linux systems <br>
 
+		>[sudo] npm install -g @angular/cli@latest
 
-Briefly, we create an APP_NAME in Heroku. Associated with this APP_NAME we'll have an URL for visiting our page.
-Then, we deploy our Docker work over the APP_NAME. Then we can validate in the URL.
-
-To start: in a terminal window, in the folder we have our Dockerfile, we connect to Heroku:
-heroku login   // (opens a browser for login)
-heroku container:login   //needed as well for working with containers
-
-For creating an APP_NAME:
-heroku create  // that give us an URL, we have to extract the APP_NAME from the URL.
-
-To know all the APP_NAMEs we have:
-heroku apps  //it's possible as well inside the heroku account (on then browser)
-
-On my case:
-URL is https://fathomless-thicket-72625.herokuapp.com/
-
-wich means that APP_NAME = fathomless-thicket-72625
-my app name is fathomless-thicket-72625 
+	After that, we can run ng commands, such as create a new Angular app.
 
 
-heroku container:push web -a APP_NAME
-heroku container:release web -a APP_NAME
+3.- Create a new app:
+		
+		>ng new angular-hello-world
 
-On my case:
+	After that, an Angular app is created, we can edit it (with VSCode or any other editor).
+	
+4.- To run locally our app, we have to go inside the my-first-app folder and run:
+	
+		>ng serve
 
-heroku container:push web -a fathomless-thicket-72625	// to deploy to Heroku server
-heroku container:release web -a fathomless-thicket-72625 	// to make it visible in the web<br><br>
+	That compiles our app and deployes it to the local server, port 4200.
+	We can then in the browser run:
+	
+	...
+	
+5.- Prepare the appp to be deployed to the server. Inside the app folder:
+	
+	folder = dist/angular-hello-world
+	1.- ng build --prod  // this creates a dist folder!
 
-<em>Last update of this repository: 2021-02-16 (readme file reorganization) </em>
+
+## How to deploy an Angular app into the server.
+
+5.- Deploy into a remote server. On my case, I choosed Firebase (free) hosting.
+	
+	After creating our account on Firebase we need to create a Project (with default settings).
+	That is done in Firebase's Console. Pretty straitgt fordward. 
+	The name could be (not needs to be) the same as the Angular (angular-hello-world).
+	
+	To be able of deploying. first, just once, we have to install firebase-cli 
+	Again, with npm:
+	
+		> npm - g firebase-tools 
+
+
+0.- firebase login (to log into firebase account)
+0b.- firebase init to connect the project in the folder we are in to the project in firebase WE Need to be in our angular project! choose hosting!
+
+rewrite all: yes! we have a SPA (single page app)!
+index.html exists, owerwrite? N!
+
+Finally: firebase deploy  // that give us an URL !
+
+Now, we have our local angular app connected to our project firebase. Lets deply it!
+> firebase deploy
+
+Project Console: https://console.firebase.google.com/project/angular-hello-world-ab1fe/overview
+Hosting URL: https://angular-hello-world-ab1fe.web.app  // that's all
+
+
+## Some examples of Angular+Bootstrap apps.
+
+5.- I expect to add some copy-paste examples in the future.
+
+
+<em>Last update of this repository: 2021-02-20 (readme file reorganization) </em>
