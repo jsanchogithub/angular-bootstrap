@@ -36,14 +36,13 @@ Next command compiles our app and deployes it to the local server, port 4200.
 
 		> ng build --prod  // this creates a dist folder!
 	
-7. A new folder os created (folder = dist/angular-hello-world). That folder will be used to deploy to the remote server.
+7. A new folder is created (folder = dist/angular-hello-world). That folder will be used to deploy to the remote server.
 
 
 ## 2.- How to deploy an Angular app into the remote server.
 
-8. Choose the server. On my case, I choosed Firebase (free) hosting. After creating our account on Firebase we need to create a new Project <br>
-We do that in Firebase's Console accepting the default settings. Pretty straightfordward. <br>
-Project's name could be the same as the Angular (angular-hello-world).
+8. Choose the server. On my case, I choosed Firebase (free) hosting. After creating our account on Firebase we need to create a new Project.
+We do that in Firebase's Console accepting the default settings. Pretty straightfordward. Project's name could be the same as the Angular (angular-hello-world).
 	
 9. Install on the local computer tool for deploying into the remote server (firebase-CLI). After that, we can execute Firebase's commands.
 	
@@ -53,7 +52,7 @@ Project's name could be the same as the Angular (angular-hello-world).
 
 		> firebase login //to log into firebase account
 
-11. Connect the app to the Firebase project to be deployed. We have to choose 'rewrite all: Y' (as we are cretaing a SPA app) and <br>
+11. Connect the app to the Firebase project to be deployed. We have to choose 'rewrite all: Y' (as we are cretaing a SPA app) and 
 'index.html exists, owerwrite? N'
 
 		> firebase init //connect the project in the folder we are in to the project in firebase. In the options, choose 'Hosting'.
@@ -62,8 +61,8 @@ Project's name could be the same as the Angular (angular-hello-world).
 
 		> firebase deploy //connect
 
-When completed, firebase deploy command shows the information we need to visit (and to maintain) the app:
-Project Console: https://console.firebase.google.com/project/angular-hello-world-ab1fe/overview
+When completed, firebase deploy command shows the information we need to visit (and to maintain) the app:<br>
+Project Console: https://console.firebase.google.com/project/angular-hello-world-ab1fe/overview<br>
 Hosting URL: https://angular-hello-world-ab1fe.web.app  //we can visit in this URL our work!
 
 
