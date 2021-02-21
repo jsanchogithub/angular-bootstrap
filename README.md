@@ -8,32 +8,30 @@ Contents of this repo:
 2.- How to deploy an Angular app into the server (to Firebase, in this case).<br>
 3.- Some examples of Angular (+Bootstrap) apps.
 
-## How to create an Angular app.
+## 1.- How to create an Angular app.
 
-Create an Angular app:
-
-1.- Install node.js // used for installing the Angular-CLI. (Follow https://nodejs.org/en/ instructions) <br>
-	After that, we can run npm (Node Package Manager) commands in our system.
+1. Install node.js // used for installing the Angular-CLI. (Follow https://nodejs.org/en/ instructions) <br>
+After that, we can run npm (Node Package Manager) commands in our system.
 	
-2.- Install Angular-CLI // official Angular line command. [sudo] could be required in Mac/Linux systems <br>
+2. Install Angular-CLI // official Angular line command. [sudo] could be required in Mac/Linux systems <br>
 
 		>[sudo] npm install -g @angular/cli@latest
 
-	After that, we can run ng commands, such as create a new Angular app.
+After that, we can run ng commands, such as create a new Angular app.
 
 
-3.- Create a new app:
+3. Create a new app:
 		
 		>ng new angular-hello-world
 
-	After that, an Angular app is created, we can edit it (with VSCode or any other editor).
+After that, an Angular app is created, we can edit it (with VSCode or any other editor).
 	
-4.- To run locally our app, we have to go inside the my-first-app folder and run:
+4. To run locally our app, we have to go inside the angular-hello-world folder and run:
 	
 		>ng serve
 
-	That compiles our app and deployes it to the local server, port 4200.
-	We can then in the browser run:
+That compiles our app and deployes it to the local server, port 4200.
+We can then in the browser run:
 	
 	...
 	
@@ -43,9 +41,9 @@ Create an Angular app:
 	1.- ng build --prod  // this creates a dist folder!
 
 
-## How to deploy an Angular app into the server.
+## 2.- How to deploy an Angular app into the server.
 
-5.- Deploy into a remote server. On my case, I choosed Firebase (free) hosting.
+5. Deploy into a remote server. On my case, I choosed Firebase (free) hosting.
 	
 	After creating our account on Firebase we need to create a Project (with default settings).
 	That is done in Firebase's Console. Pretty straitgt fordward. 
@@ -57,7 +55,7 @@ Create an Angular app:
 		> npm - g firebase-tools 
 
 
-0.- firebase login (to log into firebase account)
+0. firebase login (to log into firebase account)
 0b.- firebase init to connect the project in the folder we are in to the project in firebase WE Need to be in our angular project! choose hosting!
 
 rewrite all: yes! we have a SPA (single page app)!
@@ -72,9 +70,9 @@ Project Console: https://console.firebase.google.com/project/angular-hello-world
 Hosting URL: https://angular-hello-world-ab1fe.web.app  // that's all
 
 
-## Some examples of Angular+Bootstrap apps.
+## 3.- Some examples of Angular+Bootstrap apps.
 
-5.- I expect to add some copy-paste examples in the future.
+5. I expect to add some copy-paste examples in the future.
 
 
 <em>Last update of this repository: 2021-02-20 (readme file reorganization) </em>
