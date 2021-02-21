@@ -59,7 +59,7 @@ We do that in Firebase's Console accepting the default settings. Pretty straight
 
 12. Finally, deploy app into the remote server. We have to choose the dist folder (dist/angular-hello-world).
 
-		> firebase deploy //connect
+		> firebase deploy
 
 When completed, firebase deploy command shows the information we need to visit (and to maintain) the app:<br>
 Project Console: https://console.firebase.google.com/project/angular-hello-world-ab1fe/overview<br>
@@ -68,7 +68,7 @@ Hosting URL: https://angular-hello-world-ab1fe.web.app  //we can visit in this U
 
 ## 3.- Some examples of Angular+Bootstrap apps.
 
-5. I expect to add some copy-paste examples in the future.
+I expect to add some copy-paste examples in the future. For now, in the Examples folder, just an html file (the one I used before).
+For now, instructions inside each file.<br>
 
-
-<em>Last update of this repository: 2021-02-20 (readme file reorganization) </em>
+<em>Last update of this repository: 2021-02-21 (repository creation)</em>
