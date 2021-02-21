@@ -14,31 +14,30 @@ Contents of this repo:
 After that, we can run npm (Node Package Manager) commands in our system.
 	
 2. Install Angular-CLI // official Angular line command. [sudo] could be required in Mac/Linux systems <br>
-
-		>[sudo] npm install -g @angular/cli@latest
-
 After that, we can run ng commands, such as create a new Angular app.
 
+		> [sudo] npm install -g @angular/cli@latest
 
-3. Create a new app:
-		
-		>ng new angular-hello-world
-
+3. Create a new app.<br>
 After that, an Angular app is created, we can edit it (with VSCode or any other editor).
-	
-4. To run locally our app, we have to go inside the angular-hello-world folder and run:
-	
-		>ng serve
+		
+		> ng new angular-hello-world
 
-That compiles our app and deployes it to the local server, port 4200.
+4. To run locally our app, we have to go inside the angular-hello-world folder and run <br>
+Next command compiles our app and deployes it to the local server, port 4200. <br>
 We can then in the browser run:
 	
-	...
+		> ng serve
+
+5. View app in local browser (URL is showed by ng server when compile is finished) <br>
 	
-5.- Prepare the appp to be deployed to the server. Inside the app folder:
+		> URL = http://localhost:4200/
 	
-	folder = dist/angular-hello-world
-	1.- ng build --prod  // this creates a dist folder!
+6. Prepare the appp to be deployed to the remote server. Inside the app folder <br>
+
+		> ng build --prod  // this creates a dist folder!
+	
+7. A new folder os created (folder = dist/angular-hello-world). That folder will be used to deploy to the remote server.
 
 
 ## 2.- How to deploy an Angular app into the server.
